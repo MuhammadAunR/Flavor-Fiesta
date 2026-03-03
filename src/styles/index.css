@@ -1,1 +1,14 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+
+:root{
+    --color-primary:#E67514;
+    --color-second:#06923E;
+    --color-text:#212121;
+    --color-bg:#D3ECCD;
+    --font-main: 'Poppins', sans-serif;
+}
+
+html,body{
+    font-family: var(--font-main);
+    scroll-behavior: smooth;
+}
