@@ -70,7 +70,7 @@ const Carousal = () => {
         .slide-out { animation: slideOut 0.5s cubic-bezier(.4,0,.2,1) forwards; }
       `}</style>
 
-      <main className='pt-28 w-10/12 mx-auto relative'>
+      <main data-aos="fade-up" className='pt-32 w-10/12 mx-auto relative'>
         <section className='relative overflow-hidden rounded-2xl'>
 
           <div className='relative w-full h-[calc(100vh-130px)]'>

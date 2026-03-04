@@ -5,7 +5,6 @@ import { sidebarContext } from './SidebarContext'
 
 const AsideNavbar = () => {
     const { isSidebarOpen, toggleSidebar } = useContext(sidebarContext)
-    console.log("sidebar state", isSidebarOpen)
     return (
         <>
             {isSidebarOpen ? <div className='w-full h-screen bg-black/30 backdrop-blur-sm absolute z-50'></div> : ""}

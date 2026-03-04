@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='flex items-center justify-between w-10/12 mx-auto fixed z-50 top-5 left-1/2 -translate-x-1/2 bg-(--color-bg) py-4 px-7 rounded-full'>
+            <nav data-aos='fade-down' className='flex items-center justify-between w-10/12 mx-auto fixed z-50 top-5 left-1/2 -translate-x-1/2 bg-(--color-bg)/70 backdrop-blur-2xl  py-4 px-7 rounded-full'>
 
                 <div className="logo">
                     <Link to={'/'} className='cursor-pointer'>
