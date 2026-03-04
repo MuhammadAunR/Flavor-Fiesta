@@ -153,7 +153,7 @@ const SubscribeButton = () => {
 
 const StyledWrapper3 = styled.div`
   .button {
-    height: 50px;
+    height: 55px;
     width: 150px;
     border: none;
     border-radius: 10px;
@@ -169,7 +169,7 @@ const StyledWrapper3 = styled.div`
 
   .type1::after {
     content: "Thanks";
-    height: 50px;
+    height: 55px;
     width: 150px;
     background-color: #E67514;
     color: #fff;

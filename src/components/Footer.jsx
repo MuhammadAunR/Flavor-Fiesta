@@ -37,14 +37,19 @@ const Footer = () => {
                 <div className='bg-gray-300 w-full h-px mt-7'></div>
 
                 <div className='my-5 italic'>
-                    <span className='flex gap-2 items-baseline justify-center'>&copy; 2026
-                        <h2
-                            style={{ fontFamily: "'Story Script', cursive" }}
-                            className='font-bold text-(--color-text)'>
-                            FlavorFiesta
-                            <span className='text-(--color-primary)'>.</span>
-                        </h2>
-                        Developed by <Link target='_blank' to={'https://github.com/MuhammadAunR/'} className='hover:text-blue-500 transition-colors ease-in-out hover:underline cursor-pointer font-semibold'>Muhammad Aun R</Link></span>
+                    <div className='flex flex-wrap gap-2 items-baseline justify-center text-sm'>
+                        <div className='flex gap-2'>
+                            &copy; 2026
+                            <h2
+                                style={{ fontFamily: "'Story Script', cursive" }}
+                                className='font-bold text-(--color-text)'>
+                                FlavorFiesta
+                                <span className='text-(--color-primary)'>.</span>
+                            </h2>
+                        </div>
+                        <div>
+                            Developed by <Link target='_blank' to={'https://github.com/MuhammadAunR/'} className='hover:text-blue-500 transition-colors ease-in-out hover:underline cursor-pointer font-semibold'>Muhammad Aun R</Link></div>
+                    </div>
                 </div>
             </footer>
         </>

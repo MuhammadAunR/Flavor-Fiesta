@@ -18,7 +18,7 @@ const Home = () => {
 
       {/* Category Section  */}
       <section className='w-10/12 mx-auto my-7 py-7'>
-        <div data-aos="fade-up" className='flex items-center justify-between mb-7'>
+        <div data-aos="fade-up" className='flex items-center justify-between mb-7 max-sm:flex-wrap gap-4 max-sm:justify-center'>
           <h3 className='text-4xl font-bold text-(--color-text)'>Categories</h3>
           <div className='bg-(--color-bg) px-5 py-2 rounded-lg font-semibold hover:bg-(--color-primary) hover:text-white transition-colors ease-linear duration-300 cursor-pointer'>View All Categories</div>
         </div>
@@ -37,7 +37,7 @@ const Home = () => {
       {/* Recipe Section  */}
       <section className='w-10/12 mx-auto'>
         <div data-aos="zoom-in" className='flex flex-col gap-4 items-center justify-center text-center py-10 mb-10'>
-          <h2 className='font-bold text-5xl text-(--color-text)'>Simple and tasty recipes</ h2>
+          <h2 className='font-bold text-4xl lg:text-5xl text-(--color-text)'>Simple and tasty recipes</ h2>
           <p className='text-lg text-center text-gray-600'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae explicabo a sunt ipsum nobis aperiam maxime odio, quos quaerat!</p>
         </div>
 
@@ -53,13 +53,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='flex items-center justify-center gap-7 w-10/12 mx-auto my-7 py-7'>
-        <div className='flex flex-col gap-7'>
-          <h2 className='text-6xl font-bold text-(--color-text)'>Everyone can be a chef <br /> in their own kitchen</h2>
-          <p className='text-gray-500 w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, doloribus magni! Minus, sequi! Natus soluta rem commodi, illum dolorem dolores!</p>
+      <section className='flex items-center justify-center max-lg:flex-wrap gap-7 w-10/12 mx-auto my-7 py-7'>
+        <div className='flex flex-col gap-7 max-lg:items-center justify-center px-5'>
+          <h2 className='text-4xl lg:text-6xl font-bold text-(--color-text) max-lg:text-center'>Everyone can be a chef <br className='max-lg:hidden' /> in their own kitchen</h2>
+          <p className='text-gray-500 lg:w-1/2 max-lg:text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, doloribus magni! Minus, sequi! Natus soluta rem commodi, illum dolorem dolores!</p>
           <LearnMoreButton />
         </div>
-        <div className='bg-linear-to-b from-white to-(--color-bg) w-1/2 h-100 relative'>
+        <div className='bg-linear-to-b from-white to-(--color-bg) max-md:w-full max-md:mt-10  w-1/2 h-100 relative'>
           <img src={maleChefImage} alt="Male Chef Pic" className='absolute w-full bottom-0' />
         </div>
       </section>
@@ -67,7 +67,7 @@ const Home = () => {
       <section className='bg-linear-to-b from-white to-(--color-bg)/50'>
         <div className='w-10/12 mx-auto my-7 py-7'>
           <div data-aos="zoom-in" className='flex flex-col gap-4 items-center justify-center text-center py-10 mb-10'>
-            <h2 className='font-bold text-5xl text-(--color-text)'>Checkout @FlavorFiesta on Instagram</ h2>
+            <h2 className='font-bold text-4xl lg:text-5xl text-(--color-text)'>Checkout @FlavorFiesta on Instagram</ h2>
             <p className='text-lg text-center text-gray-600'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae explicabo a sunt ipsum nobis aperiam maxime odio, quos quaerat!</p>
           </div>
           <div className='flex items-center justify-center flex-wrap gap-7 py-5'>
@@ -87,8 +87,8 @@ const Home = () => {
       </section>
 
       <section className='w-10/12 mx-auto py-7 my-7'>
-        <div className='flex gap-4 items-center justify-between py-10 mb-10'>
-          <h2 data-aos='fade-right' className='font-bold text-5xl text-(--color-text)'>Try this delicious recipe to make your day</ h2>
+        <div className='flex gap-4 items-center justify-between max-lg:flex-wrap py-10 mb-10'>
+          <h2 data-aos='fade-right' className='font-bold text-4xl lg:text-5xl text-(--color-text) max-lg:text-center'>Try this delicious recipe to make your day</ h2>
           <p data-aos='fade-left' className='text-lg text-center text-gray-600'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae explicabo a sunt ipsum nobis aperiam maxime odio, quos quaerat!</p>
         </div>
 
@@ -99,27 +99,25 @@ const Home = () => {
         </div>
       </section>
 
-      <section data-aos='fade-up' className='w-10/12 mx-auto bg-(--color-bg) rounded-3xl my-7 h-100 relative'>
-        <img src={saladImage} alt="Salad PNG" className='absolute left-0 bottom-0' />
-        <img src={plateImage} alt="Plate PNG" className='absolute right-0 bottom-0 rounded-3xl' />
+      <section data-aos='fade-up' className='w-10/12 mx-auto bg-(--color-bg) rounded-3xl my-7 h-fit md:h-100 relative overflow-hidden'>
+        <img src={saladImage} alt="Salad PNG" className='absolute -left-7 -bottom-7 -z-10 max-md:w-56' />
+        <img src={plateImage} alt="Plate PNG" className='absolute -right-7 -bottom-7 rounded-3xl -z-10 max-md:w-52' />
         <div className='flex flex-col gap-10 items-center justify-center py-10'>
-          <div className='flex flex-col items-center justify-center gap-5 pt-10'>
-            <h3 className='font-bold text-5xl text-(--color-text)'>Deliciousness to your inbox</h3>
+          <div className='flex flex-col items-center justify-center gap-5 pt-5 px-5'>
+            <h3 className='font-bold max-sm:text-3xl text-4xl lg:text-5xl text-(--color-text) text-center'>Deliciousness to your inbox</h3>
             <p className='text-center text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Minus itaque temporibus nemo neque corporis ratione facilis obcaecati veniam fugit cum!</p>
           </div>
-          <div>
-            <label htmlFor="email" className='relative'>
+          <div className='flex gap-4 justify-center max-md:flex-wrap'>
+            <label htmlFor="email" className=''>
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder='Enter your email'
-                className='bg-white outline-none rounded-2xl w-100 text-gray-600 shadow-2xl py-6 px-7'
+                className='bg-white outline-none rounded-2xl w-72 md:w-100 text-gray-600 shadow-2xl py-4 px-7'
               />
-              <span className='absolute right-3 -bottom-6'>
-                <SubscribeButton />
-              </span>
             </label>
+              <SubscribeButton />
           </div>
         </div>
       </section>
