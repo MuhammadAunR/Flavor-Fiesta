@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const ClockIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -20,23 +21,25 @@ const HeartIcon = () => (
 
 const RecipeCard = ({ recipe }) => {
     return (
-        <div data-aos='zoom-in' className={`relative w-72 h-90 cursor-pointer overflow-hidden flex flex-col gap-4 rounded-xl bg-linear-to-b ${recipe.color} group`}>
-            <span className={`absolute top-4 right-4 z-20 group-hover:rotate-y-180 duration-500 transition-transform ease-linear rounded-full ${recipe.favorite === true ? 'text-red-500' : 'text-white'}`}>
-                <HeartIcon />
-            </span>
-            <img src={recipe.img} alt={recipe.name} className='w-full h-52 object-cover overflow-hidden group-hover:scale-105 transition-transform ease-linear' />
-            <h3 className='font-semibold text-lg px-2'>{recipe.name}</h3>
-            <div className='flex items-center gap-3 px-2 pt-3 flex-wrap'>
-                <div className='bg-(--color-bg) flex gap-1 items-center w-fit px-2 py-1 font-semibold rounded-full'>
-                    <ClockIcon />
-                    <span className='text-sm'>{recipe.time}</span>
-                </div>
-                <div className='bg-(--color-bg) flex gap-1 items-center w-fit px-2 py-1 font-semibold rounded-full'>
-                    <ForkIcon />
-                    <span className='text-sm'>{recipe.category}</span>
+        <Link to={`/recipeDetails/${recipe.name.toLowerCase().trim().replace(/\s+/g, "-")}`}>
+            <div data-aos='zoom-in' className={`relative w-72 h-90 cursor-pointer overflow-hidden flex flex-col gap-4 rounded-xl bg-linear-to-b ${recipe.color} group`}>
+                <span className={`absolute top-4 right-4 z-20 group-hover:rotate-y-180 duration-500 transition-transform ease-linear rounded-full ${recipe.favorite === true ? 'text-red-500' : 'text-white'}`}>
+                    <HeartIcon />
+                </span>
+                <img src={recipe.img} alt={recipe.name} className='w-full h-52 object-cover overflow-hidden group-hover:scale-105 transition-transform ease-linear' />
+                <h3 className='font-semibold text-lg px-2'>{recipe.name}</h3>
+                <div className='flex items-center gap-3 px-2 pt-3 flex-wrap'>
+                    <div className='bg-(--color-bg) flex gap-1 items-center w-fit px-2 py-1 font-semibold rounded-full'>
+                        <ClockIcon />
+                        <span className='text-sm'>{recipe.time}</span>
+                    </div>
+                    <div className='bg-(--color-bg) flex gap-1 items-center w-fit px-2 py-1 font-semibold rounded-full'>
+                        <ForkIcon />
+                        <span className='text-sm'>{recipe.category}</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

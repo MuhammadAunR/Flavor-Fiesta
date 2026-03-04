@@ -19,11 +19,18 @@ const AsideNavbar = () => {
                 </div>
 
                 <ul className='flex flex-col items-start justify-center gap-5 text-lg font-semibold'>
-                    <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>Home</li>
-                    <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>Recipes</li>
-                    <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>Blog</li>
-                    <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>Contact</li>
-                    <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>About</li>
+                    <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>
+                        <Link to={'/'}>Home</Link>
+                    </li>
+                    <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>
+                        <Link to={'/recipes'}>Recipes</Link>
+                    </li>
+                    <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>
+                        <Link to={'/contact'}>Contact</Link>
+                    </li>
+                    <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>
+                        <Link to={'/about'}>About</Link>
+                    </li>
                 </ul>
             </aside>
 

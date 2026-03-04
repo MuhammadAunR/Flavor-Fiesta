@@ -94,7 +94,7 @@ const Carousal = () => {
             </div>
           </div>
 
-          <div className='flex flex-col gap-10 items-start justify-center absolute top-36 left-10 px-10 z-10'
+          <div className='flex flex-col gap-5 md:gap-10 items-start max-md:items-center justify-center absolute top-20 md:top-36 md:left-10 px-10 z-10'
             style={{
               opacity: sliding ? 0 : 1,
               transform: sliding ? 'translateY(12px)' : 'translateY(0)',
@@ -102,13 +102,13 @@ const Carousal = () => {
               transitionDelay: sliding ? '0s' : '0.25s',
             }}
           >
-            <h4 className='bg-(--color-bg) w-fit px-5 py-1 font-semibold uppercase rounded-full'>
+            <h4 className='bg-(--color-bg) w-fit max-sm:text-sm px-3 md:px-5 py-1 font-semibold uppercase rounded-full'>
               {slides[current].tag}
             </h4>
-            <h1 className='font-bold text-7xl text-gray-200'>{slides[current].title}</h1>
-            <p className='text-xl text-gray-200 max-w-2xl'>{slides[current].description}</p>
+            <h1 className='font-bold max-sm:text-3xl max-md:text-5xl lg:text-7xl max-md:text-center text-gray-200'>{slides[current].title}</h1>
+            <p className='text-sm md:text-xl text-gray-200 max-w-2xl max-md:text-center'>{slides[current].description}</p>
 
-            <div className='flex items-center gap-5'>
+            <div className='flex items-center gap-5 max-md:flex-col'>
               <div className='bg-(--color-bg) flex gap-2 items-center w-fit px-5 py-1 font-semibold rounded-full'>
                 <ClockIcon />
                 <span>{slides[current].time}</span>
@@ -125,7 +125,7 @@ const Carousal = () => {
           {/* Prev Arrow */}
           <button
             onClick={prev}
-            className='absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/65 text-white rounded-full w-11 h-11 flex items-center justify-center text-2xl transition'
+            className='absolute left-4 -bottom-2 sm:top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/65 text-white rounded-full w-11 h-11 flex items-center justify-center text-2xl transition'
           >
             <ChevronLeft />
           </button>
@@ -133,7 +133,7 @@ const Carousal = () => {
           {/* Next Arrow */}
           <button
             onClick={next}
-            className='absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/65 text-white rounded-full w-11 h-11 flex items-center justify-center text-2xl transition'
+            className='absolute right-4 -bottom-2 sm:top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/65 text-white rounded-full w-11 h-11 flex items-center justify-center text-2xl transition'
           >
             <ChevronRight />
           </button>

@@ -95,6 +95,11 @@ export const recipes = [
     category: 'Snack',
     color: 'from-white to-purple-100',
     favorite: true,
+    calories: '340.5 kcal',
+    fat: '18.2 g',
+    protein: '22.1 g',
+    carbohydrate: '28.4 g',
+    cholesterol: '75.3 mg',
   },
   {
     img: recipe2,
@@ -103,6 +108,11 @@ export const recipes = [
     category: 'Fish',
     color: 'from-white to-orange-100',
     favorite: false,
+    calories: '280.0 kcal',
+    fat: '13.5 g',
+    protein: '34.8 g',
+    carbohydrate: '6.2 g',
+    cholesterol: '89.0 mg',
   },
   {
     img: recipe3,
@@ -111,6 +121,11 @@ export const recipes = [
     category: 'Breakfast',
     color: 'from-white to-yellow-100',
     favorite: true,
+    calories: '219.9 kcal',
+    fat: '10.7 g',
+    protein: '7.9 g',
+    carbohydrate: '22.3 g',
+    cholesterol: '37.4 mg',
   },
   {
     img: recipe4,
@@ -119,6 +134,11 @@ export const recipes = [
     category: 'Healthy',
     color: 'from-white to-green-100',
     favorite: false,
+    calories: '150.2 kcal',
+    fat: '8.4 g',
+    protein: '4.1 g',
+    carbohydrate: '14.7 g',
+    cholesterol: '12.5 mg',
   },
   {
     img: recipe5,
@@ -127,6 +147,11 @@ export const recipes = [
     category: 'Meat',
     color: 'from-white to-red-100',
     favorite: true,
+    calories: '410.3 kcal',
+    fat: '24.6 g',
+    protein: '31.2 g',
+    carbohydrate: '12.8 g',
+    cholesterol: '110.7 mg',
   },
   {
     img: recipe6,
@@ -135,6 +160,11 @@ export const recipes = [
     category: 'Sweet',
     color: 'from-white to-blue-100',
     favorite: false,
+    calories: '265.4 kcal',
+    fat: '9.1 g',
+    protein: '6.3 g',
+    carbohydrate: '38.9 g',
+    cholesterol: '44.2 mg',
   },
   {
     img: recipe7,
@@ -143,6 +173,11 @@ export const recipes = [
     category: 'Snack',
     color: 'from-white to-amber-100',
     favorite: false,
+    calories: '390.0 kcal',
+    fat: '11.3 g',
+    protein: '28.7 g',
+    carbohydrate: '45.1 g',
+    cholesterol: '68.9 mg',
   },
   {
     img: recipe8,
@@ -151,9 +186,13 @@ export const recipes = [
     category: 'Noodles',
     color: 'from-white to-slate-100',
     favorite: true,
+    calories: '520.8 kcal',
+    fat: '28.9 g',
+    protein: '35.4 g',
+    carbohydrate: '38.2 g',
+    cholesterol: '95.6 mg',
   },
 ];
-
 export const categories = [
   { img: category1, name: 'Breakfast', color: 'from-white to-yellow-100' },
   { img: category2, name: 'Vegan', color: 'from-white to-green-100' },
@@ -172,8 +211,8 @@ export const posts = [
 ];
 
 export const navOptions = [
-  { name: 'Home',     toLink: '/' },
-  { name: 'Recipes',  toLink: '/recipes' },
-  { name: 'Contact',  toLink: '/contact' },
-  { name: 'About',    toLink: '/about' },
+  { name: 'Home', toLink: '/' },
+  { name: 'Recipes', toLink: '/recipes' },
+  { name: 'Contact', toLink: '/contact' },
+  { name: 'About', toLink: '/about' },
 ];
