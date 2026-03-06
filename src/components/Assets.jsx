@@ -216,3 +216,50 @@ export const navOptions = [
   { name: 'Contact', toLink: '/contact' },
   { name: 'About', toLink: '/about' },
 ];
+
+export const steps = [
+  { step: 1, task: 'Gather all ingredients and measure them out before you start cooking.' },
+  { step: 2, task: 'Prepare and chop all vegetables, meats, or other ingredients as required.' },
+  { step: 3, task: 'Heat your pan or oven to the recommended temperature before adding anything.' },
+  { step: 4, task: 'Cook the main ingredients, stirring or flipping as needed until done.' },
+  { step: 5, task: 'Season with salt, pepper, and spices to taste during the final stage.' },
+  { step: 6, task: 'Plate the dish neatly, garnish if desired, and serve immediately while hot.' },
+];
+
+export const directions = [
+  {
+    step: 1,
+    task: 'Prepare Your Ingredients',
+    description: 'Start by thoroughly washing all vegetables under cold running water to remove any dirt or residue. Peel and chop them into uniform sizes so they cook evenly. Measure out all your spices, sauces, and liquids into small bowls beforehand — this is called mise en place and it makes the entire cooking process smoother, faster, and much less stressful once the heat is on.',
+  },
+  {
+    step: 2,
+    task: 'Marinate & Season',
+    description: 'Combine your marinade ingredients in a bowl and coat your main protein or vegetables thoroughly, making sure every surface is covered. For best results, cover and refrigerate for at least 30 minutes, or overnight if time allows. The longer it rests, the deeper the flavors penetrate into the ingredient, resulting in a much more complex and satisfying taste once cooked.',
+  },
+  {
+    step: 3,
+    task: 'Heat the Pan or Oven',
+    description: 'Place your skillet or pan on the stove over medium-high heat and allow it to warm up for at least 2 minutes before adding any oil. If using an oven, preheat it to the exact temperature specified in the recipe and give it enough time to fully reach that temperature. A properly heated cooking surface is the difference between a beautifully seared crust and a soggy, pale result that sticks to the pan.',
+  },
+  {
+    step: 4,
+    task: 'Cook the Main Ingredient',
+    description: 'Carefully place your main ingredient into the hot pan and resist the urge to move it around immediately. Let it sit undisturbed for the first 3 to 4 minutes so a proper golden crust can form on the surface. Flip it only once using tongs or a spatula, then continue cooking on the other side until it reaches the desired internal temperature. Use a meat thermometer if needed to ensure it is fully and safely cooked through.',
+  },
+  {
+    step: 5,
+    task: 'Build the Sauce or Base',
+    description: 'Without cleaning the pan, reduce the heat to medium and add your aromatics such as minced garlic, diced onions, or shallots directly into the leftover drippings. Sauté for 2 to 3 minutes until softened and fragrant. Then pour in your liquid — whether that is broth, cream, wine, or a prepared sauce — and use a wooden spoon to scrape up all the caramelized bits from the bottom of the pan, as these are packed with deep, concentrated flavor that will enrich your entire dish.',
+  },
+  {
+    step: 6,
+    task: 'Combine & Finish',
+    description: 'Return all your cooked components back into the pan and gently toss or stir everything together so the sauce coats every piece evenly. Let it simmer together on low heat for another 3 to 5 minutes so the flavors can fully meld and come together. Taste the dish carefully at this stage and make any final adjustments — a pinch more salt, a crack of black pepper, a squeeze of fresh lemon juice, or a small knob of butter stirred in at the end can completely transform and elevate the final flavor.',
+  },
+  {
+    step: 7,
+    task: 'Plate & Serve',
+    description: 'Warm your serving plates in the oven for a minute or two before plating so the food stays hot longer at the table. Spoon or arrange the dish carefully in the center of the plate, building height and structure for visual appeal. Finish with a drizzle of sauce, a scatter of fresh herbs like parsley or basil, or a light dusting of spice for color. Serve immediately so your guests enjoy the dish at its absolute best — hot, fresh, and full of flavor.',
+  },
+];
