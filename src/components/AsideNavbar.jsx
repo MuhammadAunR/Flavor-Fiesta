@@ -26,10 +26,10 @@ const AsideNavbar = () => {
                         <Link to={'/recipes'}>Recipes</Link>
                     </li>
                     <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>
-                        <Link to={'/contact'}>Contact</Link>
+                        <Link to={'/blog'}>Blog</Link>
                     </li>
                     <li className='ring-2 ring-transparent hover:translate-x-4 hover:tracking-widest transition-all ease-linear cursor-pointer rounded-full px-3 py-1'>
-                        <Link to={'/about'}>About</Link>
+                        <Link to={'/contact'}>Contact</Link>
                     </li>
                 </ul>
             </aside>
