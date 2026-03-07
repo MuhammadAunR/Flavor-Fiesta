@@ -37,11 +37,13 @@ const Home = () => {
       <section className='mx-5 md:w-10/12 md:mx-auto'>
         <div data-aos="zoom-in" className='flex flex-col gap-4 items-center justify-center text-center py-10 mb-10'>
           <h2 className='font-bold text-4xl lg:text-5xl text-(--color-text)'>Simple and tasty recipes</ h2>
-          <p className='text-lg text-center text-gray-600'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae explicabo a sunt ipsum nobis aperiam maxime odio, quos quaerat!</p>
+          <p className='text-lg text-center text-gray-600'>
+            Explore our hand-picked collection of easy, flavorful recipes crafted for every skill level. Whether you're cooking for one or feeding a crowd, there's something here for everyone.
+          </p>
         </div>
 
         <div className='flex items-center justify-center gap-7 py-5 flex-wrap'>
-          {recipes.map((recipe, i) => {
+          {recipes.slice(1, 9).map((recipe, i) => {
             if (i == 3) {
               return <div key={recipe.name} className='w-76 h- overflow-hidden rounded-xl'>
                 <img src={adsImage} alt="Ad Image" className='w-full h-90 object-cover' />
@@ -55,7 +57,9 @@ const Home = () => {
       <section className='flex items-center justify-center max-lg:flex-wrap gap-7 mx-5 md:w-10/12 md:mx-auto my-7 py-7'>
         <div data-aos='fade-right' className='flex flex-col gap-7 max-lg:items-center justify-center px-5'>
           <h2 className='text-4xl lg:text-6xl font-bold text-(--color-text) max-lg:text-center'>Everyone can be a chef <br className='max-lg:hidden' /> in their own kitchen</h2>
-          <p className='text-gray-500 lg:w-1/2 max-lg:text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, doloribus magni! Minus, sequi! Natus soluta rem commodi, illum dolorem dolores!</p>
+          <p className='text-gray-500 lg:w-1/2 max-lg:text-center'>
+            You don't need a culinary degree to cook incredible food. With the right guidance, fresh ingredients, and a little confidence, anyone can create restaurant-quality meals right at home.
+          </p>
           <LearnMoreButton />
         </div>
         <div data-aos='fade-left' className='bg-linear-to-b from-white to-(--color-bg) max-md:w-full max-md:mt-10  w-1/2 h-100 relative'>
@@ -67,7 +71,9 @@ const Home = () => {
         <div className='mx-5 md:w-10/12 md:mx-auto my-7 py-7'>
           <div data-aos="zoom-in" className='flex flex-col gap-4 items-center justify-center text-center py-10 mb-10'>
             <h2 className='font-bold text-4xl lg:text-5xl text-(--color-text)'>Checkout @FlavorFiesta on Instagram</ h2>
-            <p className='text-lg text-center text-gray-600'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae explicabo a sunt ipsum nobis aperiam maxime odio, quos quaerat!</p>
+            <p className='text-lg text-center text-gray-600'>
+              Follow us on Instagram for daily recipe inspiration, behind-the-scenes kitchen moments, and food photography that will make you hungry at any hour of the day.
+            </p>
           </div>
           <div className='flex items-center justify-center flex-wrap gap-7 py-5'>
             {posts.map((post) => {
@@ -88,11 +94,13 @@ const Home = () => {
       <section className='mx-5 md:w-10/12 md:mx-auto py-7 my-7'>
         <div className='flex gap-4 items-center justify-between max-lg:flex-wrap py-10 mb-10'>
           <h2 data-aos='fade-right' className='font-bold text-4xl lg:text-5xl text-(--color-text) max-lg:text-center'>Try this delicious recipe to make your day</ h2>
-          <p data-aos='fade-left' className='text-lg text-center text-gray-600'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae explicabo a sunt ipsum nobis aperiam maxime odio, quos quaerat!</p>
+          <p className='text-lg text-center text-gray-600'>
+            From quick weeknight dinners to weekend showstoppers, these recipes are tested, loved, and guaranteed to bring something special to your table today.
+          </p>
         </div>
 
         <div className='flex items-center justify-center gap-7 py-5 flex-wrap'>
-          {recipes.slice(3,7).map((recipe) => {
+          {recipes.slice(3, 7).map((recipe) => {
             return <RecipeCard key={recipe.name} recipe={recipe} />
           })}
         </div>

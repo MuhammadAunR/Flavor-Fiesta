@@ -13,22 +13,22 @@ const Footer = () => {
                                 <h2 style={{ fontFamily: "'Story Script', cursive" }} className='text-3xl font-bold text-(--color-text)'>FlavorFiesta<span className='text-(--color-primary)'>.</span></h2>
                             </Link>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, excepturi.</p>
+                        <p>"Discover and share delicious recipes from around the world, all in one place.”</p>
                     </div>
 
                     <ul className='flex items-center justify-center gap-5 text-lg font-semibold max-xl:hidden'>
                         {navOptions.map((item) => (
                             <div key={item.name}>
-                                <li
-                                    className='relative cursor-pointer px-3 py-1 group'
-                                >
-                                    <Link to={item.toLink}>
+                                <Link to={item.toLink}>
+                                    <li
+                                        className='relative cursor-pointer px-3 py-1 group'
+                                    >
                                         <span className='absolute inset-0 rounded-full bg-(--color-primary) scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ease-out origin-center -z-10' />
-                                        <span className='hover:text-white transition-colors ease-linear'>
+                                        <span className='group-hover:text-white transition-colors ease-linear'>
                                             {item.name}
                                         </span>
-                                    </Link>
-                                </li>
+                                    </li>
+                                </Link>
                             </div>
                         ))}
                     </ul>

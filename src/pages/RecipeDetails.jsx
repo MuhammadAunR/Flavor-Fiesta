@@ -170,7 +170,7 @@ const RecipeDetails = () => {
 
             <section className='mx-5 md:w-10/12 md:mx-auto py-7'>
                 <div className='flex gap-7 flex-wrap justify-center'>
-                    {recipes.slice(4).map(recipe => {
+                    {recipes.slice(9,13).map(recipe => {
                         return <RecipeCard key={recipe.name} recipe={recipe} />
                     })}
                 </div>

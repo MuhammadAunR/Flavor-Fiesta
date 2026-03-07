@@ -11,7 +11,7 @@ const SubscribeSection = () => {
                 <div className='flex flex-col gap-10 items-center justify-center py-10'>
                     <div className='flex flex-col items-center justify-center gap-5 pt-5 px-5'>
                         <h3 className='font-bold max-sm:text-3xl text-4xl lg:text-5xl text-(--color-text) text-center'>Deliciousness to your inbox</h3>
-                        <p className='text-center text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Minus itaque temporibus nemo neque corporis ratione facilis obcaecati veniam fugit cum!</p>
+                        <p className='text-center text-gray-600'>Get fresh recipes, cooking tips, and food inspiration delivered straight to your inbox. <br />No spam, just delicious content you'll actually want to read.</p>
                     </div>
                     <div className='flex gap-4 justify-center max-md:flex-wrap'>
                         <label htmlFor="email" className=''>
