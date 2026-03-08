@@ -38,11 +38,4 @@ finding and following recipes as effortless as possible.
 - **AOS** — Animate on Scroll for smooth scroll-triggered animations
 - **Lucide React** — Lightweight and consistent icon library
 
-## 📁 Folder Structure
-src/
-├── assets/         # Images and static media
-├── components/     # Reusable UI components
-├── pages/          # Route-level page components
-└── App.jsx         # Root component and route definitions
-
 **[Developed By Muhammad Aun](https://github.com/MuhammadAunR)**
