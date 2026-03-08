@@ -7,7 +7,6 @@ import Footer from '../components/Footer'
 
 const Recipes = () => {
     const [category, setCategory] = useState("All")
-    const [categorizedRecipes, setCategorizedRecipes] = useState(recipes)
     const [search, setSearch] = useState("")
 
     const filterProperties = [
@@ -21,23 +20,14 @@ const Recipes = () => {
         { category: 'Favorite', color: 'hover:bg-red-500 hover:ring-2 hover:ring-red-300', active: 'bg-red-500 ring-2 ring-red-300' },
     ];
 
-    const searchedRecipe = recipes.filter(item => {
-        return item.name.toLowerCase().includes(search.toLowerCase()) ||
-            item.category.toLowerCase().includes(search.toLowerCase())
+    const filteredRecipes = recipes.filter(item => {
+        const matchedCategory = category === 'All' ? true : category === 'Favorite' ? item.favorite : item.category === category
+        const searchedRecipe = item.name.toLowerCase().includes(search.toLowerCase()) || item.category.toLowerCase().includes(search.toLowerCase())
+        return matchedCategory && searchedRecipe;
     })
 
-    const handleCategory = (category) => {
-        setCategory(category)
-        const selected = recipes.filter(item => {
-            if (category === "All") {
-                return recipes
-            } else if (category === "Favorite") {
-                return item.favorite === true;
-            }
-            return item.category === category;
-        })
-        console.log(selected)
-        setCategorizedRecipes(selected)
+    const handleCategory = (cat) => {
+        setCategory(cat)
     }
 
     return (
@@ -64,7 +54,7 @@ const Recipes = () => {
 
                     <div className='flex items-center max-md:justify-center gap-5 flex-wrap'>
                         {filterProperties.map(item => {
-                            return <div key={item.category} onClick={(e) => handleCategory(e.target.innerText)} className={`flex gap-1 items-center ${category === item.category ? item.active : "bg-gray-300"} w-fit px-5 py-3 rounded-full cursor-pointer ${item.color} transition-all ease-linear duration-300`}>
+                            return <div key={item.category} onClick={() => handleCategory(item.category)} className={`flex gap-1 items-center ${category === item.category ? item.active : "bg-gray-300"} w-fit px-5 py-3 rounded-full cursor-pointer ${item.color} transition-all ease-linear duration-300`}>
                                 <span className='font-semibold text-lg'>{item.category}</span>
                                 {item.category === "Favorite" &&
                                     <span className='group-hover:text-red-300 transition-all ease-linear duration-200'>
@@ -79,12 +69,12 @@ const Recipes = () => {
             <section className='mx-5 md:w-10/12 md:mx-auto mt-10'>
                 <h3 className='text-(--color-text) font-bold text-5xl py-5 text-center'>Recipes</h3>
                 <div className='flex items-center justify-center gap-7 py-5 flex-wrap'>
-                    {searchedRecipe.length > 0 &&
+                    {/* {searchedRecipe.length > 0 &&
                         searchedRecipe.map((recipe) => {
                             return <RecipeCard key={recipe.name} recipe={recipe} />
                         })
-                    }
-                    {categorizedRecipes.map((recipe) => {
+                    } */}
+                    {filteredRecipes.map((recipe) => {
                         return <RecipeCard key={recipe.name} recipe={recipe} />
                     })}
                 </div>
